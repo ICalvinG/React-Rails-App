@@ -16,7 +16,12 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-
+# HTTParty gem helps builds class that uses web-based APIs
+gem 'httparty'
+# Use JSON gem to read JSON files
+gem 'json'
+# Use pry gem for debugging
+gem 'pry'
 # Use React.js as the frontend framework
 gem 'react-rails'
 # Use jquery as the JavaScript library
