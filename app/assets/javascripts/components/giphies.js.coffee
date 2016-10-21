@@ -1,4 +1,8 @@
 @Giphies = React.createClass
+	getInitialState: ->
+		giphies: @props.data
+	getDefaultProps: ->
+		giphies: []
 	render: ->
 		React.DOM.div
 			className: 'giphies'
