@@ -1,0 +1,2 @@
+class Giphy < ApplicationRecord
+end
