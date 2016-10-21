@@ -3,6 +3,9 @@
 		giphies: @props.data
 	getDefaultProps: ->
 		giphies: []
+	handleChange: (e) ->
+		name = e.target.name
+		@setState "#{ name }": e.target.value
 	render: ->
 		React.DOM.div
 			className: 'giphies'
