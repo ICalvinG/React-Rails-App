@@ -1,0 +1,2 @@
+class GiphiesController < ApplicationController
+end

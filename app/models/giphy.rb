@@ -1,0 +1,12 @@
+class Giphy < ApplicationRecord
+	include HTTParty
+	base_uri "http://api.giphy.com/v1/gifs/random?"
+
+	def post
+		tag = gif.downcase.gsub(/[ ]/, "+")
+		data = self.class.get("api_key=dc6zaTOxFJmzC&tag=#{tag}")
+		json_file = JSON.parse(data.body)
+		url = data['data']['fixed_height_downsampled_url']	
+	end
+
+end
