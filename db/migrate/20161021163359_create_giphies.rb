@@ -3,6 +3,7 @@ class CreateGiphies < ActiveRecord::Migration[5.0]
     create_table :giphies do |t|
       t.string :title
       t.string :gif
+      t.string :url
 
       t.timestamps
     end
