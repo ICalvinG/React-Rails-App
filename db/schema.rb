@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20161021163359) do
   create_table "giphies", force: :cascade do |t|
     t.string   "title"
     t.string   "gif"
+    t.string   "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
