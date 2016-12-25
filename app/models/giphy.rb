@@ -7,7 +7,13 @@ class Giphy < ApplicationRecord
 		tag = Giphy.find(1).title.downcase.gsub(/[ ]/, "+")
 		data = self.class.get("api_key=#{giphy_key}&tag=#{tag}")
 		json_file = JSON.parse(data.body)
-		url = data['data']['fixed_height_downsampled_url']
+		binding.pry
+		if data['data'].any?
+			url = data['data']['fixed_height_downsampled_url']
+		else
+			# GiphiesController.renderer.render(
+  	# 		partial: 'none')
+		end
 	end
 
 end
