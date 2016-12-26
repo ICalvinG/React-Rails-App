@@ -1,3 +1,7 @@
-<center><h3>Here's your random GIF</h3>
-	<iframe src="<%=@searched_gif.url%>" class="frame"></iframe>
-<h3>Thank you for using my React-Rails App</h3></center>
+<div class="success-container">
+	<h3>Here's your random GIF</h3>
+	<div class="framed-gif">
+		<iframe src="<%=@gif_result.url%>"></iframe>
+	</div>
+	<h3>Thank you for using my React-Rails App</h3>
+</div>
