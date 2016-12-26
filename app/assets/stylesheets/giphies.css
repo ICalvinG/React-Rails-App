@@ -14,3 +14,19 @@
 text-align: center;
 border: none;
 } 
+
+.app-title {
+	font-size: 150%;
+	font-weight: bold;
+	color: black;
+}
+
+.form-inline {
+	margin-top: 10px;
+}
+
+.btn-primary {
+	border: none;
+	background-color: gray; 
+	color: white;
+}
