@@ -11,20 +11,6 @@
 }
 
 .framed-gif {
-position: relative;
-padding-bottom: 65.25%;
-padding-top: 30px;
 text-align: center;
 border: none;
-height: 0;
-overflow: auto; 
--webkit-overflow-scrolling:touch; //<<--- THIS IS THE KEY 
-border: solid black 1px;
 } 
-.framed-gif iframe {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-}
