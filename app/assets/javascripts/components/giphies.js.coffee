@@ -11,8 +11,7 @@
 			className: 'giphies'
 			React.DOM.h2
 				className: 'title'
-				'Giphies'
-				React.DOM.h6
+				React.DOM.h4
 					className: 'question'
 					'What random gif would you like to see?'
 					React.DOM.form

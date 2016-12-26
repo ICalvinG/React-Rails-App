@@ -16,6 +16,8 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# Use bootstrap-sass gem for styling
+gem 'bootstrap-sass'
 # HTTParty gem helps builds class that uses web-based APIs
 gem 'httparty'
 # Use JSON gem to read JSON files
