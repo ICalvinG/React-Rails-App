@@ -1,3 +1,3 @@
-# React-Rails-App
+# Giphies
 
 This application employs the react-rails gem for the frontend and the ruby framework rails in the backend. Users are prompted for a topic and upon search the application will make a call to the Giphy API and return a random gif based on that topic. If the search was a success then the user will see a success page and the random gif. If the search was a fail then the user will see a fail page and be prompted to search for a different gif.
