@@ -16,6 +16,8 @@ ActiveRecord::Schema.define(version: 20161021163359) do
     t.string   "title"
     t.string   "gif"
     t.string   "url"
+    t.string   "height"
+    t.string   "width"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
