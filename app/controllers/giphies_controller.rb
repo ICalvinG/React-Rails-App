@@ -15,6 +15,12 @@ class GiphiesController < ApplicationController
 					if !@gif_result.url.nil?
 						render 'success'
 					else
+						@fail_gif = Giphy.new(id: 2, title: "sorry")
+						@fail_gif.save
+						if @fail_gif.save
+							@fail_gif.post
+							@sorry_gif = Giphy.find(2)
+						end
 						render 'none'
 					end
 				end
