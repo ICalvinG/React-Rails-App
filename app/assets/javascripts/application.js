@@ -18,3 +18,17 @@
 //= require components
 //= require bootstrap-sprockets
 //= require_tree .
+
+
+$(document).on('turbolinks:load', function() {
+
+	if($('.form-control').val() ==  "") 
+   		$('.submit-button').attr('disabled', true);
+
+		$('.form-control').keyup(function(){
+      if($('.form-control').val() !=  "") 
+           $('.submit-button').attr('disabled', false);    
+  	else
+     $('.submit-button').attr('disabled', true);   
+	});
+});
