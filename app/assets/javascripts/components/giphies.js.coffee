@@ -9,7 +9,7 @@
 	render: ->
 		React.DOM.div
 			className: 'giphies'
-			React.DOM.h2
+			React.DOM.div
 				className: 'title'
 				React.DOM.h4
 					className: 'question'
@@ -25,5 +25,5 @@
 							onChange: @handleChange
 						React.DOM.button
 							type: 'submit'
-							className: 'btn btn-primary'
+							className: 'btn btn-primary submit-button'
 							'Enter'
