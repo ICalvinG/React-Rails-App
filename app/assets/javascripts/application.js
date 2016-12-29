@@ -22,6 +22,8 @@
 
 $(document).on('turbolinks:load', function() {
 
+	$('.form-control').attr('autocomplete','off');
+
 	if($('.form-control').val() ==  "") 
    		$('.submit-button').attr('disabled', true);
 
