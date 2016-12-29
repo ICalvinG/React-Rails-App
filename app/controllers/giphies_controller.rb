@@ -1,4 +1,5 @@
 class GiphiesController < ApplicationController
+	before_filter :trending, :only => :index
 
 	def index
 		@giphies = Giphy.all
@@ -25,6 +26,16 @@ class GiphiesController < ApplicationController
 			end
 			Giphy.destroy_all
 		end
+	end
+
+	def trending
+		for i in 1..5
+		@test = Giphy.new
+			if @test.save
+				@test.trend 
+			end
+		end
+		Giphy.destroy_all
 	end
 	
 end
