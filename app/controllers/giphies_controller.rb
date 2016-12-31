@@ -24,6 +24,8 @@ class GiphiesController < ApplicationController
 				end
 			end
 			Giphy.destroy_all
+			ActiveRecord::Tasks::DatabaseTasks.purge_current
+    		ActiveRecord::Tasks::DatabaseTasks.migrate
 		end
 	end
 
