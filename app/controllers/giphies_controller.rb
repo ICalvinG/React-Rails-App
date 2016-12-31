@@ -5,9 +5,8 @@ class GiphiesController < ApplicationController
 		@giphies = Giphy.all
 		if params["gif"].nil? == false
 			gif = params["gif"]
-			if Giphy.where(id: 1).nil?
+			if !Giphy.where(id: 1).nil?
 				Giphy.destroy_all
-			else
 				@searched_gif = Giphy.new(id: 1, title: gif)
 				@searched_gif.save
 				if @searched_gif.save
@@ -29,13 +28,12 @@ class GiphiesController < ApplicationController
 	end
 
 	def trending
-		for i in 1..5
+		for i in 3..10
 		@test = Giphy.new
 			if @test.save
 				@test.trend 
 			end
 		end
-		Giphy.destroy_all
 	end
 	
 end
