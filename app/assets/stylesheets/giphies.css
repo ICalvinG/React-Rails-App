@@ -13,7 +13,12 @@
 .framed-gif {
 	text-align: center;
 	border: none;
-} 
+}
+
+.url {
+	display: none;
+	margin-top: 10px;
+}
 
 .app-title {
 	font-size: 150%;

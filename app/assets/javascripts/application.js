@@ -33,4 +33,8 @@ $(document).on('turbolinks:load', function() {
   	else
      $('.submit-button').attr('disabled', true);   
 	});
+
+	$('iframe').mouseover(function(){
+        $('.url').toggle();
+    });
 });

@@ -1,7 +1,9 @@
 <div class="success-container">
-	<h3>Here's your random GIF</h3>
+	<h3>Here's your random GIF!</h3>
+	<h6>Hover over the gif for the url!</h6>
 	<div class="framed-gif">
 		<iframe src="<%=@searched_gif.url%>" height="<%=@searched_gif.height%>" width="<%=@searched_gif.width%>"></iframe>
+		<div class="url"><%=@searched_gif.url%></div>
 	</div>
 	<h3>Thank you for using Giphies!</h3>
 </div>
