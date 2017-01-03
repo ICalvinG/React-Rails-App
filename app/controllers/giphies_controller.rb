@@ -31,9 +31,9 @@ class GiphiesController < ApplicationController
 
 	def trending
 		for i in 3..10
-		@test = Giphy.new
-			if @test.save
-				@test.trend 
+		@trending_gifs = Giphy.new
+			if @trending_gifs.save
+				@trending_gifs.trend 
 			end
 		end
 	end
