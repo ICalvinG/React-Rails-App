@@ -1,6 +1,6 @@
 @Giphies = React.createClass
 	getInitialState: ->
-		giphies: this.props.data
+		giphies = @props.data
 	getDefaultProps: ->
 		giphies: []
 	handleChange: (e) ->

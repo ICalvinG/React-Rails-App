@@ -30,7 +30,7 @@ class GiphiesController < ApplicationController
 	end
 
 	def trending
-		for i in 3..10
+		for i in 3..7
 		@trending_gifs = Giphy.new
 			if @trending_gifs.save
 				@trending_gifs.trend 
