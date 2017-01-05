@@ -1,5 +1,5 @@
 class GiphiesController < ApplicationController
-	before_filter :trending, :only => :index
+	before_action :trending, :only => :index
 
 	def index
 		@giphies = Giphy.all
