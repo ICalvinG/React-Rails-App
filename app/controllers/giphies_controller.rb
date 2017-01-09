@@ -1,5 +1,5 @@
 class GiphiesController < ApplicationController
-	before_action :trending, :only => :index
+	# before_action :trending, :only => :index
 
 	def index
 		@giphies = Giphy.all
@@ -29,13 +29,14 @@ class GiphiesController < ApplicationController
 		end
 	end
 
-	def trending
-		for i in 3..7
-		@trending_gifs = Giphy.new
-			if @trending_gifs.save
-				@trending_gifs.trend 
-			end
-		end
-	end
+	# Method to grab trending gifs
+	# def trending
+	# 	for i in 3..7
+	# 	@trending_gifs = Giphy.new
+	# 		if @trending_gifs.save
+	# 			@trending_gifs.trend 
+	# 		end
+	# 	end
+	# end
 	
 end
