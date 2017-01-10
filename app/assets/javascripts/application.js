@@ -37,4 +37,20 @@ $(document).on('turbolinks:load', function() {
 	$('iframe').mouseover(function(){
         $('.url').toggle();
     });
+
+  $('.refresh-icon').on('click', function(event){
+      event.preventDefault();
+
+      var $target = $(event.target);
+
+      $.ajax({
+        url: $target.attr('href') 
+      }).done(function(response){
+        var html = $(response);
+        var $newUrl = html[0].baseURI
+  
+        $('.framed-gif').load($newUrl + " iframe");
+      });
+    
+    });
 });

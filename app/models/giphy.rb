@@ -17,18 +17,19 @@ class Giphy < ApplicationRecord
 		end
 	end
 
-	def trend
-		giphy_key = Rails.application.secrets.giphy_api_key
-		data = self.class.get("/trending?api_key=#{giphy_key}")
-		json_file = JSON.parse(data.body)
-		if data['data'].any?
-			self.update_attributes(
-				:url => data["data"][self.id]["images"]["fixed_width"]["url"],
-				:height => data["data"][self.id]["images"]["fixed_width"]["height"],
-				:width => 200
-				)
-			self.save
-		end
-	end
+	# Method to seed database with trending gifs
+	# def trend
+	# 	giphy_key = Rails.application.secrets.giphy_api_key
+	# 	data = self.class.get("/trending?api_key=#{giphy_key}")
+	# 	json_file = JSON.parse(data.body)
+	# 	if data['data'].any?
+	# 		self.update_attributes(
+	# 			:url => data["data"][self.id]["images"]["fixed_width"]["url"],
+	# 			:height => data["data"][self.id]["images"]["fixed_width"]["height"],
+	# 			:width => 200
+	# 			)
+	# 		self.save
+	# 	end
+	# end
 
 end
