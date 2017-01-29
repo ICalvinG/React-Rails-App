@@ -17,6 +17,7 @@ class Giphy < ApplicationRecord
 		end
 	end
 
+	# Method built to increase border height and width of iFrame
 	def increase(str)
 		(str.to_i + 5).to_s
 	end
