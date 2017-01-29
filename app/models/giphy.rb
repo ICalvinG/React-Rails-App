@@ -10,8 +10,8 @@ class Giphy < ApplicationRecord
 		if data['data'].any?
 			self.update_attributes(
 				:url => data['data']['fixed_height_downsampled_url'],
-				:height => data['data']['fixed_height_downsampled_height'],
-				:width => data['data']['fixed_height_downsampled_width']
+				:height => increase(data['data']['fixed_height_downsampled_height']),
+				:width => increase(data['data']['fixed_height_downsampled_width'])
 				)
 			self.save
 		end
