@@ -18,7 +18,7 @@ class Giphy < ApplicationRecord
 	end
 
 	def increase(str)
-		(str.to_i + 15).to_s
+		(str.to_i + 5).to_s
 	end
 
 	# Method to seed database with trending gifs
