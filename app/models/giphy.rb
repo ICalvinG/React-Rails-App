@@ -17,6 +17,10 @@ class Giphy < ApplicationRecord
 		end
 	end
 
+	def increase(str)
+		(str.to_i + 15).to_s
+	end
+
 	# Method to seed database with trending gifs
 	# def trend
 	# 	giphy_key = Rails.application.secrets.giphy_api_key
