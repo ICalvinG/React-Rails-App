@@ -34,7 +34,7 @@ $(document).on('turbolinks:load', function() {
      $('.submit-button').attr('disabled', true);   
 	});
 
-	$('iframe').mouseover(function(){
+	$('.framed-gif').mouseover(function(){
         $('.url').toggle();
     });
 
@@ -48,6 +48,10 @@ $(document).on('turbolinks:load', function() {
       }).done(function(response){
         var html = $(response);
         var $newUrl = html[0].baseURI
+        var url = html[77].innerHTML
+        var urls = url.match(/\b(http|https)?(:\/\/)?(\S*)\.(\w{2,4})\b/ig)
+        var refreshedURL = urls[0].replace('href="','')
+        $(".url").replaceWith( "<div class='url'>" + refreshedURL + "</div>" );
   
         $('.framed-gif').load($newUrl + " iframe");
       });

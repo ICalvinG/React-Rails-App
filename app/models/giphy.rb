@@ -10,11 +10,16 @@ class Giphy < ApplicationRecord
 		if data['data'].any?
 			self.update_attributes(
 				:url => data['data']['fixed_height_downsampled_url'],
-				:height => data['data']['fixed_height_downsampled_height'],
-				:width => data['data']['fixed_height_downsampled_width']
+				:height => increase(data['data']['fixed_height_downsampled_height']),
+				:width => increase(data['data']['fixed_height_downsampled_width'])
 				)
 			self.save
 		end
+	end
+
+	# Method built to increase border height and width of iFrame
+	def increase(str)
+		(str.to_i + 5).to_s
 	end
 
 	# Method to seed database with trending gifs
