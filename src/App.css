@@ -1,4 +1,11 @@
-.header-container {
+/* App Styling */
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* Header Styling */
+.header-wrapper {
   width: 100%;
   padding: 10px;
   text-align: center;
@@ -7,5 +14,16 @@
 .header-title {
   font-size: 8em;
   font-weight: 300;
-  font-family: 'Noto Sans', sans-serif;
+}
+
+/* Form Styling */
+
+.form-wrapper {
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+}
+
+.form-instructions {
+  padding: 5px;
 }

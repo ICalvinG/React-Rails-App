@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 const Header = ({}) => (
-  <section className="header-container">
+  <section className="header-wrapper">
     <span className="header-title">Giphies</span>
   </section>
 );
