@@ -1,18 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
+import Header from './Header'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <form>
-          <label>
-            Name:
-            <input type="text"/>
-          </label>
-          <input type="submit" value="Submit" />
-        </form>
-      </div>
+      <Header />
     );
   }
 }
