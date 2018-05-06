@@ -3,10 +3,10 @@ import React from 'react';
 // CSS
 import '../stylesheets/App.css';
 
-const Header = () => (
+const Gif = (url) => (
   <section className="section-wrapper">
-    <span className="header-title">Giphies</span>
+    <img src={url.url} alt="gif" />
   </section>
 );
 
-export default Header;
+export default Gif;

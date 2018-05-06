@@ -4,12 +4,13 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
-/* Header Styling */
-.header-wrapper {
+.section-wrapper {
   width: 100%;
   padding: 10px;
   text-align: center;
 }
+
+/* Header Styling */
 
 .header-title {
   font-size: 8em;
@@ -18,12 +19,8 @@ body {
 
 /* Form Styling */
 
-.form-wrapper {
-  width: 100%;
-  padding: 15px;
-  text-align: center;
-}
-
 .form-instructions {
   padding: 5px;
 }
+
+/* Gif Styling */

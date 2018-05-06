@@ -19,13 +19,16 @@ class Form extends Component {
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
     event.preventDefault();
+
+    const { _this, onFormInput } = this.props;
+
+    onFormInput(_this, this.state.value);
   }
 
   render() {
     return (
-      <section className="form-wrapper">
+      <section className="section-wrapper">
         <div className="form-instructions">
           Type in what random gif you would like to see <span role="img">😊</span>!
         </div>
