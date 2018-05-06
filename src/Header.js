@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-const Header = ({}) => (
+const Header = () => (
   <section className="header-wrapper">
     <span className="header-title">Giphies</span>
   </section>

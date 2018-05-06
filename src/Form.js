@@ -6,7 +6,9 @@ import './App.css';
 class Form extends Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    this.state = {
+      value: '',
+    };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -25,7 +27,7 @@ class Form extends Component {
     return (
       <section className="form-wrapper">
         <div className="form-instructions">
-          Type in what random gif you would like to see 😊!
+          Type in what random gif you would like to see <span role="img">😊</span>!
         </div>
         <form onSubmit={this.handleSubmit}>
           <label>
