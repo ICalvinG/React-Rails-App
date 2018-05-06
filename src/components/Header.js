@@ -1,5 +1,7 @@
 import React from 'react';
-import './App.css';
+
+// CSS
+import '../stylesheets/App.css';
 
 const Header = () => (
   <section className="header-wrapper">
