@@ -1,18 +1,36 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component, Fragment } from 'react';
+
+// CSS
+import './stylesheets/App.css';
+
+// Components
+import Header from './components/Header'
+import Form from './components/Form'
+import Gif from './components/Gif'
 
 class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      url: '',
+    }
+  }
+
+  handleRandomInput(_this, url) {
+    _this.setState({url: url});
+  }
+
   render() {
     return (
-      <div className="App">
-        <form>
-          <label>
-            Name:
-            <input type="text"/>
-          </label>
-          <input type="submit" value="Submit" />
-        </form>
-      </div>
+      <Fragment>
+        <Header />
+        <Form
+          _this={this}
+          onFormInput={this.handleRandomInput}
+        />
+        <Gif url={this.state.url}/>
+      </Fragment>
     );
   }
 }
