@@ -21,10 +21,6 @@ class App extends Component {
     _this.setState({url: url});
   }
 
-  componentWillUnMount() {
-    debugger;
-  }
-
   render() {
     return (
       <Fragment>
