@@ -5,7 +5,7 @@ import '../stylesheets/App.css';
 
 const Gif = (url) => (
   <section className="section-wrapper">
-    <img src={url.url} alt="gif" />
+    <img src={url.url} alt="" />
   </section>
 );
 
